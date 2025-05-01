@@ -1,0 +1,14 @@
+$stmt = $conn->prepare("INSERT INTO register_table (username, password) VALUES (?, ?)");
+$stmt->bind_param("ss", $username, $password);
+
+
+
+
+if($stmt->execute()){
+    echo "The record was added successfuly";
+}else{
+    die("Your record was not added successful");
+}
+
+
+$stmt->close();
