@@ -1,0 +1,12 @@
+$servername = "localhost";
+$username = "root";
+$password = "";
+$database = "register_database";
+
+$conn = new mysqli($servername, $username, $password, $database);
+
+if($conn){
+    echo "You connected successfuly";
+}else{
+    die("Error your connection is not successful");
+}
