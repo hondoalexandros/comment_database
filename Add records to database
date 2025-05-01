@@ -1,5 +1,5 @@
 $stmt = $conn->prepare("INSERT INTO register_table (username, password) VALUES (?, ?)");
-$stmt->bind_param("ss", $username, $password);
+$stmt->bind_param("ss", $_POST["username"], $_POST["password"]);
 
 
 
