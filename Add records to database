@@ -1,14 +1,8 @@
-$stmt = $conn->prepare("INSERT INTO register_table (username, password) VALUES (?, ?)");
-$stmt->bind_param("ss", $_POST["username"], $_POST["password"]);
+$sql = "INSERT INTO register_table (username,password)
+VALUES ('$username','$password')";
 
-
-
-
-if($stmt->execute()){
-    echo "The record was added successfuly";
-}else{
-    die("Your record was not added successful");
+if ($conn->query($sql) === TRUE) {
+  echo "New record created successfully";
+} else {
+  echo "Error: " . $sql . "<br>" . $conn->error;
 }
-
-
-$stmt->close();
