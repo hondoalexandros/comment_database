@@ -1,6 +1,0 @@
-CREATE DATABASE register_database;
-
-CREATE TABLE register_table (
-    username varchar(255),
-    password varchar(255)
-);
