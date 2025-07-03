@@ -1,8 +1,0 @@
-$sql = "INSERT INTO register_table (username,password)
-VALUES ('$username','$password')";
-
-if ($conn->query($sql) === TRUE) {
-  echo "New record created successfully";
-} else {
-  echo "Error: " . $sql . "<br>" . $conn->error;
-}
